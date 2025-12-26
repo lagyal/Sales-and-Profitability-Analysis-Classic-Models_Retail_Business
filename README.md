@@ -1,76 +1,100 @@
-<h3>📊 Sales Overview Dashboard</h3>
+# Sales & Profitability Analysis — Classic Models Retail Business
 
-<p>
-This project showcases a comprehensive <b>Sales Analysis</b> using <b>Power BI</b>, <b>SQL</b>, and <b>Excel</b>. 
-It integrates raw sales data with structured queries to produce an interactive dashboard that provides actionable business insights. 
-The goal of this project is to visualize key performance indicators (KPIs) such as total sales, cost of sales, profit margins, and customer distribution across countries.
-</p>
+## Context
 
-<h3>🧩 Tools & Technologies</h3>
+Classic Models is a global retailer selling multiple product lines across regions and customer segments.
+Leadership wants to understand what is driving revenue and profit, how cost of sales impacts margins, and where to focus commercial efforts to maximize profitability.
 
-<ul>
-  <li><b>Power BI:</b> For building interactive dashboards and visualizations.</li>
-  <li><b>SQL:</b> For data transformation, cleaning, and creating analytical views.</li>
-  <li><b>Excel:</b> For initial data inspection, cleaning, and manipulation.</li>
-</ul>
+This analysis supports decisions related to:
+- Product line investment
+- Regional sales strategy
+- Customer prioritization
+- Margin control and pricing discipline
 
-<h3>🗂️ Project Files</h3>
+## Data Overview
+- Source: Classic Models sales database
+- Time Period: 2003–2005
+- Granularity: One row per order line
+- Core Dimensions:
+  - Product Line
+  - Customer
+  - Customer Country
+  - Sales Office
+  - Order Date
 
-<ul>
-  <li><b>SQL.sql:</b> Contains the SQL script used to create the <code>sales_data_for_power_bi</code> view that combines multiple tables (orders, products, customers, employees, and offices) to prepare data for Power BI analysis.</li>
-  <li><b>Sales Data for Power BI.xlsx:</b> The raw dataset used as the data source for analysis.</li>
-  <li><b>Main.pbix:</b> The Power BI report file containing visual dashboards.</li>
-</ul>
+## Metrics
+<table> <tr><th>Metric</th><th>Value</th><th>Why It Matters</th></tr> <tr><td>Total Sales</td><td>$9.6M</td><td>Overall revenue scale</td></tr> <tr><td>Net Profit</td><td>$3.83M</td><td>True business value after costs</td></tr> <tr><td>Unique Orders</td><td>326</td><td>Order volume indicator</td></tr> <tr><td>Avg Order Value</td><td>$29.46K</td><td>Revenue efficiency per order</td></tr> </table>
 
-<h3>⚙️ SQL Data Preparation</h3>
+## Findings
+1. Profit Is Highly Concentrated in a Single Product Line
+- Classic Cars generate the largest share of net profit by a wide margin.
+- Several product lines contribute meaningfully less, suggesting portfolio imbalance.
+- Low-performing lines increase complexity without proportional return.
 
-<p>
-The SQL script joins multiple tables to create a clean, analysis-ready dataset. The key fields include:
-</p>
+2. Cost of Sales Scales Predictably With Profit
+- Strong linear relationship between cost of sales and net profit.
+- Indicates stable pricing and cost discipline, with limited margin volatility.
+- Opportunity exists to optimize margins further at higher sales volumes.
 
-<ul>
-  <li><b>orderDate</b> – Transaction date.</li>
-  <li><b>productName</b> & <b>productLine</b> – Product details.</li>
-  <li><b>customerName</b> & <b>customer_country</b> – Customer information.</li>
-  <li><b>office_country</b> – Sales office region.</li>
-  <li><b>sales_value</b> – Total sales amount (quantity × price).</li>
-  <li><b>cost_of_sales</b> – Cost based on purchase price.</li>
-</ul>
+3. Regional Performance Is Uneven
+- A small number of countries and offices contribute the majority of profit.
+- Long-tail regions add marginal profit while increasing operational overhead.
+- Clear candidates exist for regional focus vs. maintenance mode.
 
-<h3>📈 Power BI Dashboard Features</h3>
+4. Revenue Growth Is Driven by Order Value, Not Order Count
+- Order volume remains relatively stable.
+- Revenue growth is primarily driven by higher-value transactions, not more orders.
+- Reinforces importance of key accounts and premium product lines.
 
-<ul>
-  <li>Visual summary of total sales, profit, and cost across time.</li>
-  <li>Regional breakdown by <b>customer country</b> and <b>office location</b>.</li>
-  <li>Top-performing products and customers by revenue.</li>
-  <li>Trend analysis with monthly and yearly performance tracking.</li>
-</ul>
+## Business Recommendations
+### Product Strategy
+Prioritize Classic Cars in marketing, inventory planning, and sales incentives.
+Reassess underperforming product lines for margin improvement or rationalization.
 
-<h3>🧮 Excel Integration</h3>
+### Regional Sales Strategy
+- Allocate senior sales resources to top-performing countries and offices.
+- Limit aggressive expansion in low-contribution regions unless margins improve.
 
-<p>
-Excel was used in the initial stages to inspect data consistency, handle missing values, and perform quick descriptive statistics before connecting to Power BI.
-</p>
+### Pricing & Margin Management
+- Monitor cost-of-sales trends closely as volume scales.
+- Introduce margin-based KPIs alongside revenue targets.
 
-<h3>🚀 Key Insights</h3>
+### Customer Focus
+- Segment customers by profit contribution, not just sales.
+- Protect and grow high-value accounts driving large average order sizes.
 
-<ul>
-  <li>Identified top product lines contributing to majority of revenue.</li>
-  <li>Detected regional sales disparities for strategic decision-making.</li>
-  <li>Highlighted customer segments with highest sales frequency and value.</li>
-</ul>
+### Dashboard
 
-<h3>💡 Learning Outcomes</h3>
+![Dashboard1](https://github.com/lagyal/Sales-and-Profitability-Analysis-Classic-Models_Retail_Business/blob/master/SalesOverview_Page1.png)
+![Dashboard2](https://github.com/lagyal/Sales-and-Profitability-Analysis-Classic-Models_Retail_Business/blob/master/SalesOverview_Page2.png)
 
-<ul>
-  <li>Improved understanding of SQL joins and data modeling for analytics.</li>
-  <li>Developed advanced Power BI dashboard design and interactivity.</li>
-  <li>Strengthened data storytelling skills with business-oriented insights.</li>
-</ul>
+Key Dashboard Views
+- Product Line Profitability: Highlights profit concentration and portfolio imbalance
+- Cost vs Profit Analysis: Visualizes margin stability and scaling behavior
+- Regional & Office Contribution: Identifies high-impact vs low-impact markets
+- Customer Contribution Flow: Connects customer, product line, and profit
 
-<h3>📬 Contact</h3>
 
-<p>
-Created by <b>Tenzing Lama</b> — aspiring Data Analyst / Data Scientist.  
-Feel free to connect on LinkedIn or explore my other projects!
-</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
